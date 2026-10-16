@@ -1,0 +1,18 @@
+{
+  "id": "./",
+  "name": "Cẩm nang iPay – VietinBank Tây Tiền Giang",
+  "short_name": "Cẩm nang iPay",
+  "description": "Hướng dẫn từng bước sử dụng VietinBank iPay dành cho khách hàng VietinBank Chi nhánh Tây Tiền Giang",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F7FB",
+  "theme_color": "#7ED3F7",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
