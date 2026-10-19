@@ -1,0 +1,98 @@
+[
+ {
+  "file": "nfc-01.mp3",
+  "text": "Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Sau đó, bấm vào biểu tượng Cài đặt, hình bánh răng, ở góc trên bên phải màn hình."
+ },
+ {
+  "file": "nfc-02.mp3",
+  "text": "Bước hai. Tại màn hình Cài đặt, Quý khách bấm vào ô Cập nhật thông tin."
+ },
+ {
+  "file": "nfc-03.mp3",
+  "text": "Bước ba. Quý khách chọn phương thức NFC, căn cước công dân gắn chip, rồi bấm Đồng ý."
+ },
+ {
+  "file": "nfc-04.mp3",
+  "text": "Bước bốn. Màn hình giới thiệu ba bước xác thực: quét mã QR, chụp chân dung, và xác thực chip trên thẻ căn cước. Quý khách bấm Bắt đầu ngay."
+ },
+ {
+  "file": "nfc-05.mp3",
+  "text": "Bước năm. Quý khách bấm Đã hiểu, rồi hướng camera vào mã QR ở mặt sau thẻ căn cước. Ứng dụng sẽ tự động quét khi thấy rõ mã. Nên đặt thẻ ở nơi đủ sáng và không bị lóa."
+ },
+ {
+  "file": "nfc-06.mp3",
+  "text": "Bước sáu. Quý khách đưa khuôn mặt vào khung hình, nhìn thẳng và giữ yên cho đến khi vòng màu xanh chạy hết. Không đeo kính râm, khẩu trang hay mũ."
+ },
+ {
+  "file": "nfc-07.mp3",
+  "text": "Bước bảy. Quý khách đặt thẻ căn cước sát vào mặt sau điện thoại. Khi máy rung, vui lòng giữ yên cả thẻ và điện thoại cho đến khi đọc xong. Với iPhone, áp thẻ gần cụm camera. Với điện thoại Android, áp thẻ vào giữa lưng máy và nhớ bật NFC trước."
+ },
+ {
+  "file": "nfc-08.mp3",
+  "text": "Bước tám. Thông tin từ chip được điền sẵn. Quý khách kiểm tra lại, nhập địa chỉ liên hệ và email nếu có, rồi bấm Tiếp tục."
+ },
+ {
+  "file": "nfc-09.mp3",
+  "text": "Bước chín. Quý khách đọc Giấy đề nghị, đánh dấu vào ô xác nhận, rồi bấm Thay đổi sinh trắc học."
+ },
+ {
+  "file": "nfc-10.mp3",
+  "text": "Bước mười. Quý khách nhập mã OTP được gửi qua tin nhắn đến số điện thoại đã đăng ký, rồi bấm Xác nhận và Hoàn tất. Lưu ý, VietinBank không bao giờ yêu cầu Quý khách cung cấp mã OTP cho bất kỳ ai."
+ },
+ {
+  "file": "nfc-11.mp3",
+  "text": "Hoàn tất. Quý khách đã cập nhật sinh trắc học thành công, và có thể tiếp tục giao dịch bình thường trên VietinBank iPay. Cảm ơn Quý khách."
+ },
+ {
+  "file": "vneid-01.mp3",
+  "text": "Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Sau đó, bấm vào biểu tượng Cài đặt, hình bánh răng, ở góc trên bên phải màn hình."
+ },
+ {
+  "file": "vneid-02.mp3",
+  "text": "Bước hai. Tại màn hình Cài đặt, Quý khách bấm vào ô Cập nhật thông tin."
+ },
+ {
+  "file": "vneid-03.mp3",
+  "text": "Bước ba. Quý khách chọn phương thức Tài khoản định danh điện tử VNeID mức độ hai. Đọc nội dung đồng ý chia sẻ dữ liệu, rồi bấm Đồng ý."
+ },
+ {
+  "file": "vneid-04.mp3",
+  "text": "Bước bốn. Màn hình giới thiệu các bước: chụp chân dung, và xác thực trên ứng dụng VNeID. Quý khách bấm Bắt đầu ngay."
+ },
+ {
+  "file": "vneid-05.mp3",
+  "text": "Bước năm. Quý khách bấm Đã hiểu, rồi hướng camera vào mã QR ở mặt sau thẻ căn cước. Lưu ý, bước quét mã QR vẫn diễn ra, dù màn hình trước chỉ nêu hai bước."
+ },
+ {
+  "file": "vneid-06.mp3",
+  "text": "Bước sáu. Quý khách đưa khuôn mặt vào khung hình, nhìn thẳng và giữ yên cho đến khi vòng màu xanh chạy hết. Không đeo kính râm, khẩu trang hay mũ."
+ },
+ {
+  "file": "vneid-07.mp3",
+  "text": "Bước bảy. Ứng dụng iPay chuyển sang ứng dụng VNeID. Quý khách bấm đồng ý chia sẻ thông tin cho VietinBank, nhập mật khẩu VNeID, rồi quay lại iPay."
+ },
+ {
+  "file": "vneid-08.mp3",
+  "text": "Bước tám. Quý khách kiểm tra thông tin lấy từ VNeID, nhập địa chỉ liên hệ và email nếu có, rồi bấm Tiếp tục."
+ },
+ {
+  "file": "vneid-09.mp3",
+  "text": "Bước chín. Quý khách nhập mã OTP được gửi qua tin nhắn đến số điện thoại đã đăng ký, rồi bấm Xác nhận và Hoàn tất. Lưu ý, VietinBank không bao giờ yêu cầu Quý khách cung cấp mã OTP cho bất kỳ ai."
+ },
+ {
+  "file": "vneid-10.mp3",
+  "text": "Hoàn tất. Quý khách đã cập nhật sinh trắc học thành công, và có thể tiếp tục giao dịch bình thường trên VietinBank iPay. Cảm ơn Quý khách."
+ },
+ {
+  "file": "quay-01.mp3",
+  "text": "Nếu điện thoại không có NFC và Quý khách chưa có tài khoản VNeID mức hai, Quý khách có thể đăng ký tại quầy. Vui lòng mang theo căn cước công dân gắn chip còn hiệu lực, và điện thoại dùng số đã đăng ký với VietinBank."
+ },
+ {
+  "file": "quay-02.mp3",
+  "text": "Quý khách đến điểm giao dịch gần nhất của VietinBank Tây Tiền Giang: Trụ sở Chi nhánh, hoặc các phòng giao dịch Cái Bè, An Hữu, Long Định, Hưng Long và Ấp Bắc. Bấm vào tên điểm giao dịch để xem đường đi."
+ },
+ {
+  "file": "quay-03.mp3",
+  "text": "Giao dịch viên sẽ đối chiếu căn cước, chụp ảnh khuôn mặt và cập nhật sinh trắc học cho Quý khách chỉ trong vài phút. Cảm ơn Quý khách."
+ }
+]

@@ -136,9 +136,20 @@ h1{font-family:var(--f-display);font-size:16px;font-weight:700;margin:0;letter-s
 .ctl{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .cbtn{border:1px solid var(--line);background:var(--surface);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--accent)}
 .cbtn svg{width:20px;height:20px}
-.cbtn.main{width:auto;padding:0 18px;border-radius:999px;background:var(--btn);color:var(--btn-ink);border-color:transparent;display:flex;gap:6px;font-weight:700;font-size:13.5px}
+.cbtn.main{width:auto;padding:0 15px;border-radius:999px;background:var(--btn);color:var(--btn-ink);border-color:transparent;display:flex;gap:6px;font-weight:700;font-size:13.5px}
 .cbtn:disabled{opacity:.35;cursor:default}
 .ctl .grp{display:flex;gap:8px}
+.ctl .grp2{display:flex;gap:8px;align-items:center}
+.vwrap{position:relative;display:inline-flex}
+#bVoice .v-on{display:none}
+#bVoice[aria-pressed="true"]{background:var(--btn);color:var(--btn-ink);border-color:transparent}
+#bVoice[aria-pressed="true"] .v-on{display:block}
+#bVoice[aria-pressed="true"] .v-off{display:none}
+#bVoice.talk::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--accent);animation:talk 1.2s ease-out infinite;pointer-events:none}
+@keyframes talk{from{transform:scale(.9);opacity:.8}to{transform:scale(1.25);opacity:0}}
+.vhint{position:absolute;right:-4px;bottom:calc(100% + 9px);background:var(--rose);color:#fff;font-size:11.5px;font-weight:700;white-space:nowrap;padding:5px 9px;border-radius:9px;box-shadow:0 6px 14px -6px rgba(215,18,73,.6);animation:bob 1.6s ease-in-out infinite;pointer-events:none}
+.vhint::after{content:"";position:absolute;right:16px;top:100%;border:5px solid transparent;border-top-color:var(--rose)}
+@keyframes bob{50%{transform:translateY(-3px)}}
 
 .foot{background:var(--band-a);color:var(--on-band)}
 .foot .wrap{padding-block:8px 9px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px}
@@ -422,7 +433,8 @@ body.theater .menu,body.theater .top .msg,body.theater .need{display:none}
           <button class="cbtn main" id="bPlay"></button>
           <button class="cbtn" id="bNext" aria-label="Bước tiếp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
         </div>
-        <button class="cbtn" id="bZoom" aria-label="Phóng to khung hướng dẫn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+        <div class="grp2"><span class="vwrap"><button class="cbtn" id="bVoice" aria-pressed="false" aria-label="Bật giọng đọc hướng dẫn"><svg class="v-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg><svg class="v-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 010 6M18.5 6.5a7.5 7.5 0 010 11"/></svg></button><span class="vhint" id="vHint" hidden>Bấm để nghe hướng dẫn</span></span>
+        <button class="cbtn" id="bZoom" aria-label="Phóng to khung hướng dẫn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div>
       </div>
     </div>
   </section>
@@ -461,6 +473,14 @@ body.theater .menu,body.theater .top .msg,body.theater .need{display:none}
     <p class="sub">Sau khi cài, biểu tượng VietinBank xuất hiện trên màn hình chính. Mở được cả khi không có mạng.</p>
     <ol class="isteps" id="inSteps"></ol>
     <div class="url" id="inUrl" hidden><code id="inUrlText"></code><button id="btnCopyInUrl">Sao chép link</button></div>
+    <button class="close" data-close>Đã hiểu</button>
+  </div>
+</div>
+<div class="scrim" id="sheetVoice" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="voT">
+    <h3 id="voT">Điện thoại chưa có giọng đọc tiếng Việt</h3>
+    <p class="sub">Quý khách vẫn xem được hướng dẫn bằng hình và chữ. Để nghe giọng đọc, vui lòng làm theo hướng dẫn phù hợp:</p>
+    <ol class="isteps" id="voSteps"></ol>
     <button class="close" data-close>Đã hiểu</button>
   </div>
 </div>
@@ -2935,6 +2955,41 @@ const TRACKS = {
   ]}
 };
 
+/* ===== Lời đọc từng bước (sửa nội dung đọc tại đây; số câu phải khớp số bước) ===== */
+const OTP_V = 'Quý khách nhập mã OTP được gửi qua tin nhắn đến số điện thoại đã đăng ký, rồi bấm Xác nhận và Hoàn tất. Lưu ý, VietinBank không bao giờ yêu cầu Quý khách cung cấp mã OTP cho bất kỳ ai.';
+const FACE_V = 'Quý khách đưa khuôn mặt vào khung hình, nhìn thẳng và giữ yên cho đến khi vòng màu xanh chạy hết. Không đeo kính râm, khẩu trang hay mũ.';
+const DONE_V = 'Hoàn tất. Quý khách đã cập nhật sinh trắc học thành công, và có thể tiếp tục giao dịch bình thường trên VietinBank iPay. Cảm ơn Quý khách.';
+const OPEN_V = ['Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Sau đó, bấm vào biểu tượng Cài đặt, hình bánh răng, ở góc trên bên phải màn hình.',
+                'Bước hai. Tại màn hình Cài đặt, Quý khách bấm vào ô Cập nhật thông tin.'];
+const VOICE = {
+  nfc:[...OPEN_V,
+    'Bước ba. Quý khách chọn phương thức NFC, căn cước công dân gắn chip, rồi bấm Đồng ý.',
+    'Bước bốn. Màn hình giới thiệu ba bước xác thực: quét mã QR, chụp chân dung, và xác thực chip trên thẻ căn cước. Quý khách bấm Bắt đầu ngay.',
+    'Bước năm. Quý khách bấm Đã hiểu, rồi hướng camera vào mã QR ở mặt sau thẻ căn cước. Ứng dụng sẽ tự động quét khi thấy rõ mã. Nên đặt thẻ ở nơi đủ sáng và không bị lóa.',
+    'Bước sáu. ' + FACE_V,
+    'Bước bảy. Quý khách đặt thẻ căn cước sát vào mặt sau điện thoại. Khi máy rung, vui lòng giữ yên cả thẻ và điện thoại cho đến khi đọc xong. Với iPhone, áp thẻ gần cụm camera. Với điện thoại Android, áp thẻ vào giữa lưng máy và nhớ bật NFC trước.',
+    'Bước tám. Thông tin từ chip được điền sẵn. Quý khách kiểm tra lại, nhập địa chỉ liên hệ và email nếu có, rồi bấm Tiếp tục.',
+    'Bước chín. Quý khách đọc Giấy đề nghị, đánh dấu vào ô xác nhận, rồi bấm Thay đổi sinh trắc học.',
+    'Bước mười. ' + OTP_V,
+    DONE_V],
+  vneid:[...OPEN_V,
+    'Bước ba. Quý khách chọn phương thức Tài khoản định danh điện tử VNeID mức độ hai. Đọc nội dung đồng ý chia sẻ dữ liệu, rồi bấm Đồng ý.',
+    'Bước bốn. Màn hình giới thiệu các bước: chụp chân dung, và xác thực trên ứng dụng VNeID. Quý khách bấm Bắt đầu ngay.',
+    'Bước năm. Quý khách bấm Đã hiểu, rồi hướng camera vào mã QR ở mặt sau thẻ căn cước. Lưu ý, bước quét mã QR vẫn diễn ra, dù màn hình trước chỉ nêu hai bước.',
+    'Bước sáu. ' + FACE_V,
+    'Bước bảy. Ứng dụng iPay chuyển sang ứng dụng VNeID. Quý khách bấm đồng ý chia sẻ thông tin cho VietinBank, nhập mật khẩu VNeID, rồi quay lại iPay.',
+    'Bước tám. Quý khách kiểm tra thông tin lấy từ VNeID, nhập địa chỉ liên hệ và email nếu có, rồi bấm Tiếp tục.',
+    'Bước chín. ' + OTP_V,
+    DONE_V],
+  quay:[
+    'Nếu điện thoại không có NFC và Quý khách chưa có tài khoản VNeID mức hai, Quý khách có thể đăng ký tại quầy. Vui lòng mang theo căn cước công dân gắn chip còn hiệu lực, và điện thoại dùng số đã đăng ký với VietinBank.',
+    'Quý khách đến điểm giao dịch gần nhất của VietinBank Tây Tiền Giang: Trụ sở Chi nhánh, hoặc các phòng giao dịch Cái Bè, An Hữu, Long Định, Hưng Long và Ấp Bắc. Bấm vào tên điểm giao dịch để xem đường đi.',
+    'Giao dịch viên sẽ đối chiếu căn cước, chụp ảnh khuôn mặt và cập nhật sinh trắc học cho Quý khách chỉ trong vài phút. Cảm ơn Quý khách.']
+};
+/* Cách đọc từ viết tắt cho giọng đọc của điện thoại (nghe sai từ nào thì sửa tại đây) */
+const LEX = [[/\biPay\b/g,'ai pay'],[/VNeID/g,'vê nê ai đi'],[/\bOTP\b/g,'ô tê pê'],[/\bNFC\b/g,'en ép xi'],[/\bQR\b/g,'kiu a'],[/\bCCCD\b/g,'căn cước']];
+const spoken = t => LEX.reduce((x,[a,b])=>x.replace(a,b), t);
+
 /* ===== Trạng thái & tiện ích ===== */
 const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -2946,6 +3001,84 @@ function copy(text, ok){
   const done=()=>toast(ok);
   try{navigator.clipboard.writeText(text).then(done).catch(()=>fallback())}catch(e){fallback()}
   function fallback(){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){toast('Chưa sao chép được, Quý khách vui lòng chọn và sao chép thủ công.')}ta.remove()}
+}
+
+/* ===== Giọng đọc =====
+   Ưu tiên file MP3 thu sẵn trong thư mục audio/ (liệt kê trong audio/manifest.json),
+   nếu không có thì dùng giọng đọc tiếng Việt có sẵn của điện thoại. */
+const RATE = 0.95;
+const V = { on:false, busy:false, endAt:0, tok:0, vi:null, files:new Set(), audio:null, warned:false };
+const store = { get(k){ try{return localStorage.getItem(k)}catch(e){return null} }, set(k,v){ try{localStorage.setItem(k,v)}catch(e){} } };
+const hasTTS = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+function pickVoice(){
+  if(!hasTTS) return;
+  const vs = speechSynthesis.getVoices().filter(v => /^vi([-_]|$)/i.test(v.lang));
+  const score = v => (/natural|online|neural/i.test(v.name)?4:0) + (/google/i.test(v.name)?3:0) + (/linh|hoaimy|namminh|\ban\b/i.test(v.name)?2:0) + (v.localService?1:0);
+  V.vi = vs.sort((a,b)=>score(b)-score(a))[0] || null;
+}
+if(hasTTS){ pickVoice(); speechSynthesis.addEventListener?.('voiceschanged', pickVoice); }
+const fileFor = () => 'audio/' + track + '-' + String(idx+1).padStart(2,'0') + '.mp3';
+const voiceText = () => (VOICE[track] && VOICE[track][idx]) || (steps()[idx].h + '. ' + steps()[idx].d);
+const voiceEst = () => V.on ? spoken(voiceText()).length * 70 / RATE + 600 : 0;   /* ước lượng thời lượng đọc */
+function stopVoice(){
+  V.tok++; V.busy = false;
+  try{ if(hasTTS) speechSynthesis.cancel() }catch(e){}
+  if(V.audio){ try{ V.audio.pause() }catch(e){} }
+  $('bVoice').classList.remove('talk');
+}
+function voiceDone(tok){ if(tok!==V.tok) return; V.busy = false; V.endAt = elapsed; $('bVoice').classList.remove('talk'); }
+function narrate(){
+  stopVoice();
+  if(!V.on) return;
+  const tok = V.tok, f = fileFor();
+  V.busy = true; $('bVoice').classList.add('talk');
+  if(V.files.has(f) && V.audio){
+    const a = V.audio; a.src = f; a.onended = () => voiceDone(tok);
+    a.onerror = () => { if(tok===V.tok) speakTTS(tok) };
+    a.play().catch(() => { if(tok===V.tok) speakTTS(tok) });
+    return;
+  }
+  speakTTS(tok);
+}
+function speakTTS(tok){
+  if(!hasTTS || !V.vi){ V.busy = false; $('bVoice').classList.remove('talk'); return noVoice(); }
+  const parts = spoken(voiceText()).match(/[^.!?]+[.!?]*/g) || [voiceText()];   /* chia câu: tránh lỗi Chrome cắt câu dài */
+  parts.forEach((p,i) => {
+    const u = new SpeechSynthesisUtterance(p.trim());
+    u.lang = V.vi.lang; u.voice = V.vi; u.rate = RATE;
+    if(i === parts.length-1){ u.onend = () => voiceDone(tok); u.onerror = () => voiceDone(tok); }
+    speechSynthesis.speak(u);
+  });
+}
+function noVoice(){
+  setVoice(false);
+  if(V.warned) return; V.warned = true;
+  let st;
+  if(inApp) st = ['Trình duyệt trong Zalo/Facebook <b>không hỗ trợ giọng đọc</b>.','Bấm nút <b>⋯</b> ở góc trên bên phải, chọn <b>Mở bằng trình duyệt</b>, rồi bật lại giọng đọc.'];
+  else if(isIOS) st = ['Mở <b>Cài đặt</b> → <b>Trợ năng</b> → <b>Nội dung được đọc</b> → <b>Giọng nói</b>.','Chọn <b>Tiếng Việt</b>, tải giọng <b>Linh</b>.','Quay lại trang này và bật giọng đọc.'];
+  else if(/android/i.test(UA)) st = ['Mở <b>Cài đặt</b>, tìm mục <b>Chuyển văn bản thành giọng nói</b>.','Chọn công cụ <b>Dịch vụ của Google</b>, ngôn ngữ <b>Tiếng Việt</b> (tải dữ liệu giọng nếu được hỏi).','Quay lại trang này và bật giọng đọc.'];
+  else st = ['Mở trang bằng <b>Microsoft Edge</b> hoặc <b>Google Chrome</b> bản mới.','Bật lại giọng đọc.'];
+  $('voSteps').innerHTML = st.map(t=>'<li><span>'+t+'</span></li>').join('');
+  openSheet('sheetVoice');
+}
+function setVoice(on){
+  V.on = on;
+  $('bVoice').setAttribute('aria-pressed', on);
+  $('bVoice').setAttribute('aria-label', on ? 'Tắt giọng đọc hướng dẫn' : 'Bật giọng đọc hướng dẫn');
+  store.set('camnang-voice', on ? '1' : '0');
+  if(!on) stopVoice();
+}
+function enableVoice(){
+  /* Gọi trong thao tác chạm của khách: mở khóa âm thanh trên iPhone */
+  if(!V.audio){ V.audio = new Audio(); V.audio.preload = 'auto'; }
+  if(hasTTS){ try{ const u = new SpeechSynthesisUtterance(' '); u.volume = 0; speechSynthesis.speak(u) }catch(e){} pickVoice(); }
+  setVoice(true); $('vHint').hidden = true;
+  if(!V.vi && hasTTS && !V.files.size){
+    /* một số máy nạp danh sách giọng chậm: chờ tối đa 1,5 giây */
+    let n = 0; const t = setInterval(() => { pickVoice(); if(V.vi || ++n > 15){ clearInterval(t); if(V.on){ elapsed = 0; narrate() } } }, 100);
+    return;
+  }
+  elapsed = 0; narrate();
 }
 
 /* ===== Lưới hướng dẫn ===== */
@@ -3003,6 +3136,7 @@ function go(i){
   $('bNext').disabled = idx===st.length-1;
   updatePlay();
   animate(step);
+  V.endAt = 0; narrate();
 }
 function animate(step){
   const scr=$('scr'), f=$('finger'), T=(fn,ms)=>timers.push(setTimeout(fn,reduce?0:ms));
@@ -3025,14 +3159,15 @@ function updatePlay(){
   $('bPlay').innerHTML = end ? I.replay+'Xem lại' : playing ? I.pause+'Tạm dừng' : I.play+'Tự động phát';
   $('bPlay').querySelector('svg').setAttribute('width','18');
 }
-const dur = () => steps()[idx].dur || DUR;
+const dur = () => Math.max(steps()[idx].dur || DUR, voiceEst());
 function tick(now){
   const dt = last ? now-last : 0; last = now;
   if(playing && !document.hidden){
     elapsed += dt;
     const seg = $('segs').children[idx];
-    if(seg) seg.firstElementChild.style.width = Math.min(100, elapsed/dur()*100)+'%';
-    if(elapsed >= dur()){
+    if(seg) seg.firstElementChild.style.width = Math.min(V.busy ? 97 : 100, elapsed/dur()*100)+'%';
+    const waitVoice = V.on && (V.busy || elapsed < V.endAt + 700);   /* đọc xong mới sang bước */
+    if(elapsed >= dur() && !waitVoice){
       if(idx < steps().length-1) go(idx+1);
       else { playing=false; updatePlay(); }
     }
@@ -3047,8 +3182,16 @@ $('bPrev').onclick=$('tzPrev').onclick=()=>go(idx-1);
 $('bNext').onclick=$('tzNext').onclick=()=>{ if(idx<steps().length-1) go(idx+1) };
 $('bPlay').onclick=()=>{
   if(idx===steps().length-1 && elapsed>=dur()){ playing=true; go(0); return; }
-  playing=!playing; if(playing && elapsed>=dur()) elapsed=0; updatePlay();
+  playing=!playing;
+  if(!playing){ stopVoice(); updatePlay(); return; }
+  if(V.on){ go(idx); return; }            /* tiếp tục: đọc lại bước hiện tại từ đầu */
+  if(elapsed>=dur()) elapsed=0; updatePlay();
 };
+$('bVoice').onclick = () => { if(V.on){ setVoice(false); toast('Đã tắt giọng đọc') } else enableVoice() };
+/* Khách đã bật giọng đọc lần trước: tự bật lại ở lần chạm đầu tiên */
+if(store.get('camnang-voice')==='1') addEventListener('pointerdown', e => { if(!V.on && !e.target.closest('#bVoice')) enableVoice() }, {once:true, capture:true});
+else if(store.get('camnang-voice')===null){ $('vHint').hidden = false; setTimeout(()=>{ $('vHint').hidden = true }, 9000); }
+document.addEventListener('visibilitychange', () => { if(document.hidden) stopVoice(); else if(V.on) go(idx); });
 $('bZoom').onclick=()=>{ document.body.classList.toggle('theater'); requestAnimationFrame(()=>{fit(); go(idx)});
   $('bZoom').setAttribute('aria-label', document.body.classList.contains('theater')?'Thu nhỏ khung hướng dẫn':'Phóng to khung hướng dẫn'); };
 document.addEventListener('keydown',e=>{ if(e.target.closest('input,textarea'))return;
@@ -3092,6 +3235,7 @@ $('btnInstall').onclick = async () => {
   openSheet('sheetInstall');
 };
 $('btnCopyInUrl').onclick = () => copy(shareUrl(), 'Đã sao chép link, Quý khách dán vào trình duyệt để mở');
+if(PWA) fetch('audio/manifest.json',{cache:'no-cache'}).then(r=>r.ok?r.json():[]).then(a=>{ V.files = new Set((a||[]).map(f=>'audio/'+f)) }).catch(()=>{});
 if(PWA && 'serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 
 /* ===== Khởi động ===== */
