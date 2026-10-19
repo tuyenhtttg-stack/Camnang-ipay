@@ -8,7 +8,7 @@ Cách chạy:
     set FPT_API_KEY=khoa_cua_anh      (Windows)   |   export FPT_API_KEY=...  (macOS/Linux)
     python tao-giong-doc-fpt.py --voice banmai --speed -1
 
-Kết quả: thư mục ../audio/ gồm 24 file .mp3 và manifest.json -> upload cả thư mục lên GitHub.
+Kết quả: thư mục ../audio/ gồm 51 file .mp3 và manifest.json -> upload cả thư mục lên GitHub.
 Lưu ý: KHÔNG đưa API key lên GitHub; kiểm tra điều khoản dùng thương mại của gói FPT.AI.
 Giọng FPT.AI: banmai, thuminh, myan (nữ Bắc/Trung) · lannhi, linhsan (nữ Nam) · leminh, giahuy, minhquang (nam)
 """
@@ -18,7 +18,7 @@ import requests
 
 API = "https://api.fpt.ai/hmi/tts/v5"
 # Cách đọc từ viết tắt (giống trong index.html)
-LEX = [(r"\biPay\b", "ai pay"), (r"VNeID", "vê nê ai đi"), (r"\bOTP\b", "ô tê pê"),
+LEX = [(r"R-ATM", "e rờ a tê em"), (r"\bATM\b", "a tê em"), (r"Soft OTP", "sóp ô tê pê"), (r"\biPay\b", "ai pay"), (r"VNeID", "vê nê ai đi"), (r"\bOTP\b", "ô tê pê"),
        (r"\bNFC\b", "en ép xi"), (r"\bQR\b", "kiu a"), (r"\bCCCD\b", "căn cước")]
 
 def spoken(t):

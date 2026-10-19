@@ -1,6 +1,6 @@
 /* Service worker: cho phép mở app khi không có mạng.
    Mỗi lần cập nhật index.html, tăng số phiên bản bên dưới (v1 → v2 ...) */
-const CACHE = 'cam-nang-ipay-v2';
+const CACHE = 'cam-nang-ipay-v4';
 const ASSETS = ['./', './index.html', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png',
   './icons/apple-touch-icon.png', './icons/favicon-64.png'];

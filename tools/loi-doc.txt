@@ -1,9 +1,9 @@
-LỜI ĐỌC HƯỚNG DẪN CẬP NHẬT SINH TRẮC HỌC
-Cẩm nang iPay – VietinBank Chi nhánh Tây Tiền Giang
+LỜI ĐỌC HƯỚNG DẪN – CẨM NANG iPay
+VietinBank Chi nhánh Tây Tiền Giang
 
 Mỗi đoạn lưu thành 1 file MP3 đúng tên, đặt vào thư mục audio/ trên GitHub.
 
-== Qua NFC (CCCD gắn chip) ==
+== Sinh trắc học – Qua NFC ==
 
 [nfc-01.mp3]
 Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Sau đó, bấm vào biểu tượng Cài đặt, hình bánh răng, ở góc trên bên phải màn hình.
@@ -38,7 +38,7 @@ Bước mười. Quý khách nhập mã OTP được gửi qua tin nhắn đến
 [nfc-11.mp3]
 Hoàn tất. Quý khách đã cập nhật sinh trắc học thành công, và có thể tiếp tục giao dịch bình thường trên VietinBank iPay. Cảm ơn Quý khách.
 
-== Qua VNeID ==
+== Sinh trắc học – Qua VNeID ==
 
 [vneid-01.mp3]
 Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Sau đó, bấm vào biểu tượng Cài đặt, hình bánh răng, ở góc trên bên phải màn hình.
@@ -70,7 +70,7 @@ Bước chín. Quý khách nhập mã OTP được gửi qua tin nhắn đến s
 [vneid-10.mp3]
 Hoàn tất. Quý khách đã cập nhật sinh trắc học thành công, và có thể tiếp tục giao dịch bình thường trên VietinBank iPay. Cảm ơn Quý khách.
 
-== Tại quầy ==
+== Sinh trắc học – Tại quầy ==
 
 [quay-01.mp3]
 Nếu điện thoại không có NFC và Quý khách chưa có tài khoản VNeID mức hai, Quý khách có thể đăng ký tại quầy. Vui lòng mang theo căn cước công dân gắn chip còn hiệu lực, và điện thoại dùng số đã đăng ký với VietinBank.
@@ -80,3 +80,92 @@ Quý khách đến điểm giao dịch gần nhất của VietinBank Tây Tiền
 
 [quay-03.mp3]
 Giao dịch viên sẽ đối chiếu căn cước, chụp ảnh khuôn mặt và cập nhật sinh trắc học cho Quý khách chỉ trong vài phút. Cảm ơn Quý khách.
+
+== Nộp tiền bằng mã – Bước 1: Tạo mã trên iPay ==
+
+[nap1-01.mp3]
+Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Tại màn hình chính, bấm vào mục Nộp tiền bằng mã tại ATM.
+
+[nap1-02.mp3]
+Bước hai. Màn hình giới thiệu tính năng nộp tiền không cần thẻ, gồm ba bước: tạo mã trên iPay, giao dịch tại máy R-ATM, nộp tiền và xác nhận. Quý khách bấm Tiếp tục.
+
+[nap1-03.mp3]
+Bước ba. Tại màn hình Quản lý mã nộp tiền, Quý khách bấm Tạo mã nộp tiền.
+
+[nap1-04.mp3]
+Bước bốn. Quý khách chọn tài khoản nhận tiền. Có thể nhập số tài khoản, chọn trong danh bạ, hoặc chọn tài khoản của chính Quý khách. Vui lòng kiểm tra kỹ tên người nhận.
+
+[nap1-05.mp3]
+Bước năm. Quý khách chọn thẻ tạo mã và số lượng mã. Mỗi lần nộp tối đa hai trăm tờ tiền, hoặc một trăm triệu đồng, tùy loại máy. Đánh dấu vào ô xác nhận quyền sở hữu số tiền nộp, rồi bấm Tiếp tục.
+
+[nap1-06.mp3]
+Bước sáu. Quý khách kiểm tra lại thông tin giao dịch. Mã Soft OTP được điền tự động, Quý khách bấm Xác nhận và Hoàn tất.
+
+[nap1-07.mp3]
+Bước bảy. Mã nộp tiền gồm sáu chữ số hiện trên màn hình. Quý khách ghi nhớ mã, chuẩn bị bốn số cuối căn cước công dân, và đến máy R-ATM trước thời gian hết hạn của mã.
+
+== Nộp tiền bằng mã – Bước 2: Nộp tiền tại R-ATM ==
+
+[nap2-01.mp3]
+Tại máy R-ATM, Quý khách chạm vào màn hình và chọn giao dịch Nộp tiền bằng mã. Không cần đưa thẻ vào máy.
+
+[nap2-02.mp3]
+Quý khách nhập mã nộp tiền gồm sáu chữ số vừa tạo trên iPay, rồi bấm Tiếp tục.
+
+[nap2-03.mp3]
+Tiếp theo, Quý khách nhập bốn số cuối của căn cước công dân, rồi bấm Tiếp tục.
+
+[nap2-04.mp3]
+Màn hình hiện số tài khoản và tên người nhận. Quý khách kiểm tra thật kỹ, nếu đúng thì bấm Tiếp tục. Nếu sai, bấm Thoát.
+
+[nap2-05.mp3]
+Khay nộp tiền mở ra, Quý khách đặt tiền vào khay. Máy chỉ nhận tiền mệnh giá năm mươi nghìn, một trăm nghìn, hai trăm nghìn và năm trăm nghìn đồng. Vui lòng bỏ chun, ghim kẹp, và không nộp tiền rách, tiền gấp hay tiền ướt.
+
+[nap2-06.mp3]
+Máy đếm và hiện số tiền đã nộp. Quý khách kiểm tra số tờ và tổng tiền. Muốn nộp thêm thì bấm Nộp thêm tiền. Nếu đúng, bấm Xác nhận.
+
+[nap2-07.mp3]
+Giao dịch hoàn tất. Quý khách kiểm tra thông báo biến động số dư trên ứng dụng iPay. Cảm ơn Quý khách.
+
+== Rút tiền bằng mã – Bước 1: Tạo mã trên iPay ==
+
+[rut1-01.mp3]
+Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Bấm vào biểu tượng tìm kiếm ở thanh dưới màn hình.
+
+[rut1-02.mp3]
+Bước hai. Quý khách gõ chữ rút, rồi chọn chức năng Rút tiền bằng mã tại ATM.
+
+[rut1-03.mp3]
+Bước ba. Màn hình giới thiệu tính năng rút tiền không cần thẻ. Quý khách bấm Tiếp tục.
+
+[rut1-04.mp3]
+Bước bốn. Tại màn hình Quản lý mã rút tiền, Quý khách bấm Tạo mã rút tiền.
+
+[rut1-05.mp3]
+Bước năm. Quý khách chọn tài khoản nguồn và số tiền cần rút. Số tiền phải là bội số của năm mươi nghìn đồng. Sau đó bấm Tiếp tục.
+
+[rut1-06.mp3]
+Bước sáu. Quý khách kiểm tra thông tin. Mã Soft OTP được điền tự động, Quý khách bấm Xác nhận và Hoàn tất.
+
+[rut1-07.mp3]
+Bước bảy. Mã rút tiền gồm sáu chữ số hiện trên màn hình. Quý khách đến máy ATM để rút tiền trước thời gian hết hạn của mã. Tuyệt đối không cung cấp mã rút tiền cho người khác.
+
+== Rút tiền bằng mã – Bước 2: Rút tiền tại ATM ==
+
+[rut2-01.mp3]
+Tại máy ATM, Quý khách chạm vào màn hình và chọn giao dịch Rút tiền bằng mã. Không cần đưa thẻ vào máy.
+
+[rut2-02.mp3]
+Quý khách nhập mã rút tiền gồm sáu chữ số, rồi bấm Tiếp tục.
+
+[rut2-03.mp3]
+Máy hỏi Quý khách có muốn lấy biên lai giao dịch không. Quý khách chọn Có hoặc Không.
+
+[rut2-04.mp3]
+Ứng dụng iPay sẽ gửi thông báo yêu cầu xác thực giao dịch. Quý khách mở thông báo và bấm Xác thực giao dịch. Nếu không phải giao dịch do Quý khách thực hiện, hãy bấm Hủy giao dịch.
+
+[rut2-05.mp3]
+Quý khách kiểm tra mã rút tiền, số tiền và địa chỉ máy ATM. Mã Soft OTP được điền tự động, Quý khách bấm Xác nhận và Hoàn tất.
+
+[rut2-06.mp3]
+Máy trả tiền. Quý khách nhận tiền và kiểm đếm trước khi rời khỏi máy. Cảm ơn Quý khách.

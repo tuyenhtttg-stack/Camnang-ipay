@@ -94,5 +94,113 @@
  {
   "file": "quay-03.mp3",
   "text": "Giao dịch viên sẽ đối chiếu căn cước, chụp ảnh khuôn mặt và cập nhật sinh trắc học cho Quý khách chỉ trong vài phút. Cảm ơn Quý khách."
+ },
+ {
+  "file": "nap1-01.mp3",
+  "text": "Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Tại màn hình chính, bấm vào mục Nộp tiền bằng mã tại ATM."
+ },
+ {
+  "file": "nap1-02.mp3",
+  "text": "Bước hai. Màn hình giới thiệu tính năng nộp tiền không cần thẻ, gồm ba bước: tạo mã trên iPay, giao dịch tại máy R-ATM, nộp tiền và xác nhận. Quý khách bấm Tiếp tục."
+ },
+ {
+  "file": "nap1-03.mp3",
+  "text": "Bước ba. Tại màn hình Quản lý mã nộp tiền, Quý khách bấm Tạo mã nộp tiền."
+ },
+ {
+  "file": "nap1-04.mp3",
+  "text": "Bước bốn. Quý khách chọn tài khoản nhận tiền. Có thể nhập số tài khoản, chọn trong danh bạ, hoặc chọn tài khoản của chính Quý khách. Vui lòng kiểm tra kỹ tên người nhận."
+ },
+ {
+  "file": "nap1-05.mp3",
+  "text": "Bước năm. Quý khách chọn thẻ tạo mã và số lượng mã. Mỗi lần nộp tối đa hai trăm tờ tiền, hoặc một trăm triệu đồng, tùy loại máy. Đánh dấu vào ô xác nhận quyền sở hữu số tiền nộp, rồi bấm Tiếp tục."
+ },
+ {
+  "file": "nap1-06.mp3",
+  "text": "Bước sáu. Quý khách kiểm tra lại thông tin giao dịch. Mã Soft OTP được điền tự động, Quý khách bấm Xác nhận và Hoàn tất."
+ },
+ {
+  "file": "nap1-07.mp3",
+  "text": "Bước bảy. Mã nộp tiền gồm sáu chữ số hiện trên màn hình. Quý khách ghi nhớ mã, chuẩn bị bốn số cuối căn cước công dân, và đến máy R-ATM trước thời gian hết hạn của mã."
+ },
+ {
+  "file": "nap2-01.mp3",
+  "text": "Tại máy R-ATM, Quý khách chạm vào màn hình và chọn giao dịch Nộp tiền bằng mã. Không cần đưa thẻ vào máy."
+ },
+ {
+  "file": "nap2-02.mp3",
+  "text": "Quý khách nhập mã nộp tiền gồm sáu chữ số vừa tạo trên iPay, rồi bấm Tiếp tục."
+ },
+ {
+  "file": "nap2-03.mp3",
+  "text": "Tiếp theo, Quý khách nhập bốn số cuối của căn cước công dân, rồi bấm Tiếp tục."
+ },
+ {
+  "file": "nap2-04.mp3",
+  "text": "Màn hình hiện số tài khoản và tên người nhận. Quý khách kiểm tra thật kỹ, nếu đúng thì bấm Tiếp tục. Nếu sai, bấm Thoát."
+ },
+ {
+  "file": "nap2-05.mp3",
+  "text": "Khay nộp tiền mở ra, Quý khách đặt tiền vào khay. Máy chỉ nhận tiền mệnh giá năm mươi nghìn, một trăm nghìn, hai trăm nghìn và năm trăm nghìn đồng. Vui lòng bỏ chun, ghim kẹp, và không nộp tiền rách, tiền gấp hay tiền ướt."
+ },
+ {
+  "file": "nap2-06.mp3",
+  "text": "Máy đếm và hiện số tiền đã nộp. Quý khách kiểm tra số tờ và tổng tiền. Muốn nộp thêm thì bấm Nộp thêm tiền. Nếu đúng, bấm Xác nhận."
+ },
+ {
+  "file": "nap2-07.mp3",
+  "text": "Giao dịch hoàn tất. Quý khách kiểm tra thông báo biến động số dư trên ứng dụng iPay. Cảm ơn Quý khách."
+ },
+ {
+  "file": "rut1-01.mp3",
+  "text": "Bước một. Quý khách mở ứng dụng VietinBank iPay và đăng nhập. Bấm vào biểu tượng tìm kiếm ở thanh dưới màn hình."
+ },
+ {
+  "file": "rut1-02.mp3",
+  "text": "Bước hai. Quý khách gõ chữ rút, rồi chọn chức năng Rút tiền bằng mã tại ATM."
+ },
+ {
+  "file": "rut1-03.mp3",
+  "text": "Bước ba. Màn hình giới thiệu tính năng rút tiền không cần thẻ. Quý khách bấm Tiếp tục."
+ },
+ {
+  "file": "rut1-04.mp3",
+  "text": "Bước bốn. Tại màn hình Quản lý mã rút tiền, Quý khách bấm Tạo mã rút tiền."
+ },
+ {
+  "file": "rut1-05.mp3",
+  "text": "Bước năm. Quý khách chọn tài khoản nguồn và số tiền cần rút. Số tiền phải là bội số của năm mươi nghìn đồng. Sau đó bấm Tiếp tục."
+ },
+ {
+  "file": "rut1-06.mp3",
+  "text": "Bước sáu. Quý khách kiểm tra thông tin. Mã Soft OTP được điền tự động, Quý khách bấm Xác nhận và Hoàn tất."
+ },
+ {
+  "file": "rut1-07.mp3",
+  "text": "Bước bảy. Mã rút tiền gồm sáu chữ số hiện trên màn hình. Quý khách đến máy ATM để rút tiền trước thời gian hết hạn của mã. Tuyệt đối không cung cấp mã rút tiền cho người khác."
+ },
+ {
+  "file": "rut2-01.mp3",
+  "text": "Tại máy ATM, Quý khách chạm vào màn hình và chọn giao dịch Rút tiền bằng mã. Không cần đưa thẻ vào máy."
+ },
+ {
+  "file": "rut2-02.mp3",
+  "text": "Quý khách nhập mã rút tiền gồm sáu chữ số, rồi bấm Tiếp tục."
+ },
+ {
+  "file": "rut2-03.mp3",
+  "text": "Máy hỏi Quý khách có muốn lấy biên lai giao dịch không. Quý khách chọn Có hoặc Không."
+ },
+ {
+  "file": "rut2-04.mp3",
+  "text": "Ứng dụng iPay sẽ gửi thông báo yêu cầu xác thực giao dịch. Quý khách mở thông báo và bấm Xác thực giao dịch. Nếu không phải giao dịch do Quý khách thực hiện, hãy bấm Hủy giao dịch."
+ },
+ {
+  "file": "rut2-05.mp3",
+  "text": "Quý khách kiểm tra mã rút tiền, số tiền và địa chỉ máy ATM. Mã Soft OTP được điền tự động, Quý khách bấm Xác nhận và Hoàn tất."
+ },
+ {
+  "file": "rut2-06.mp3",
+  "text": "Máy trả tiền. Quý khách nhận tiền và kiểm đếm trước khi rời khỏi máy. Cảm ơn Quý khách."
  }
 ]
